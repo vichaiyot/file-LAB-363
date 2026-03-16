@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Event Click Example</title>
+</head>
+
+<body>
+
+
+    <img src="./img/images.jpg" id="myImage" style="cursor:pointer;" alt="sample image">
+
+    <br><br>
+
+
+    <input type="text" id="myTextbox" placeholder="คลิกที่นี่">
+
+    <p id="result"></p>
+
+    <script>
+        // ดึง element
+        const image = document.getElementById("myImage");
+        const textbox = document.getElementById("myTextbox");
+        const result = document.getElementById("result");
+
+        image.onclick = () => {
+            alert("คลิกภาพ")
+        }
+
+        textbox.onclick = () => {
+            alert("คลิกกล่อง")
+        }
+        // เมื่อคลิกรูปภาพ
+        image.addEventListener("click", function () {
+            result.innerText = "มีการคลิกภาพ";
+        });
+
+        // เมื่อคลิก Textbox
+        textbox.addEventListener("click", function () {
+            result.innerText = "มีการคลิก Textbox";
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="registerForm">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" >
+    <br><br>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" >
+    <br><br>
+
+    <label for="confirm_password">Confirm Password</label>
+    <input type="password" id="confirm_password" name="confirm_password">
+    <br><br>
+
+    <button type="submit">Register</button>
+    </form>
+<script>
+
+    const form = document.getElementById("registerForm");
+   
+    // ตัวอย่าง user จำลอง
+   
+    form.addEventListener((e)=> {
+        e.preventDefault(); // ป้องกันการ reload หน้าเว็บ
+
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
+    const confirm_password = document.getElementById("confirm_password");
+
+
+    if(!usernameInput || !passwordInput ||!confirm_password){
+        alert("โปรดใส่ข้อมูล")
+    }else if(passwordInput !== confirm_password){
+        alert("รหัสไม่ตรงกัน")
+    }else{
+        alert("Loginสำเร็จ")
+    }
+    });
+
+
+     
+</script>
+
+
+</body>
+</html>
